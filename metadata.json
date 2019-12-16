@@ -1,5 +1,5 @@
 {
-  "name": "pbg+ntp",
+  "name": "pbg-ntp",
   "version": "0.1.4",
   "author": "Peter Sheehan",
   "summary": "Example module to manage NTP",
@@ -8,10 +8,20 @@
   "project_page": "https://github.com/petergsheehan/pbg_ntp",
   "tags": ["ntp"],
   "dependencies": [
-    { "name":"puppetlabs/stdlib", "version_requirement": ">= 4.17.0 < 5.0.0" }
+    { "name":"puppetlabs/stdlib","version_requirement":">= 4.17.0 < 5.0.0" }
   ],
+  "data_provider": "hiera",
   "operatingsystem_support": [
     {
-    "operatingsystem": "Ubuntu",
-    "operatingsystemrelease": [ "16.04" ]
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [ "16.04" ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.5.0 < 5.0.0"
+    }
+  ],
+  "description": "NTP module"
 }
